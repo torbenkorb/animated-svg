@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG Animation</title>
+
+    <style type="text/css">
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .site {
+            max-width: 1024px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        h1 {
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+
+            animation: reveal .3s 5s forwards;
+        }
+
+        @keyframes reveal {
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* =========================================================
+         * SVG Animation relevant styles
+         * =======================================================*/
+
+        svg {
+            width: 100%;
+            stroke: #ffcc33;
+            stroke-width: 6;
+            stroke-dasharray: 1105;
+            stroke-dashoffset: 1105;
+
+            animation: offset 5s linear forwards;
+        }
+        path {
+            fill: #f0f0f0;
+        }
+
+
+        @keyframes offset {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="site">
+
+        <svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path class="track" d="M178.55 176.42c7.93 12 23.57 16.77 37.94 16.2 14.37-.57 28.15-5.51 42.12-8.94 26.34-6.46 53.99-7.56 80.77-3.22 12.39 2.01 26.4 6.72 30.67 18.52 1.93 5.35 1.44 11.24 2.43 16.84 2.58 14.48 14.5 25.1 24.73 35.68s19.96 24.53 16.58 38.84c-1.47 6.23-5.29 11.6-7.86 17.46-8.58 19.53-2.69 42.16 4.51 62.23 7.2 20.08 15.79 41.01 12.19 62.03-4.94 28.81-34.65 50.28-63.81 48.26-6.49-.45-13.06-1.96-18.48-5.55-5.12-3.4-8.89-8.41-12.78-13.17a207.432 207.432 0 0 0-27.36-27.68c-3.36-2.81-6.91-5.57-11.09-6.88-5.89-1.84-12.23-.56-18.36.18-24.37 2.98-52.91-5.43-62.72-27.94-2.81-6.46-3.85-13.52-5.71-20.32-6.17-22.54-21.28-41.61-38.15-57.79s-35.78-30.12-52.32-46.63c-12.52-12.5-24.29-28.45-22.62-46.07 2.43-25.65 31.79-42.01 35.48-67.51 1.07-7.36.95-16.78 7.78-19.73 3.01-1.3 6.49-.74 9.66.13 17.44 4.81 32.01 18.94 37.35 36.22"/></svg>
+
+
+
+        <h1>Track completed!!!</h1>
+
+    </div>
+
+</body>
+</html>
